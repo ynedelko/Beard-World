@@ -1,0 +1,10 @@
+<h1>Beard World</h1>
+
+
+  <% @beards.each do |beard| %>
+<h2><%= beard.name %><br></h2>
+<h3>
+  Rating: <%= beard.rating %> <br>
+  <img src= "<%= beard.image_url %>" /><br>
+</h3>
+  <% end %>
