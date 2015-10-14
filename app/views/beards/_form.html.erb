@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @beard %>
+
+<%= form_for @beard do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :rating %>
+<%= f.text_field :rating %>
+<%= f.label :image_url %>
+<%= f.text_field :image_url %>
+<%= f.submit %>
+<% end %>
