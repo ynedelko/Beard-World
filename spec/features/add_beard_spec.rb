@@ -30,3 +30,12 @@ describe "updating a beard" do
     expect(page).to have_content '10'
   end
 end
+
+describe "deleting a beard process" do
+  it "deletes a beard" do
+    beard = Beard.create(:name => 'Lumberjack', :rating => '6', :image_url => '/images/lumberjack.png')
+    visit beard_path(beard)
+    click_on 'Delete Beard'
+    expect(page).to_not have_content 'Lumberjack'
+  end
+end

@@ -33,6 +33,12 @@ class BeardsController < ApplicationController
     end
   end
 
+  def destroy
+    @beard = Beard.find(params[:id])
+    @beard.destroy
+    redirect_to beards_path
+  end
+
   private
   def beard_params
     params.require(:beard).permit(:name, :rating, :image_url)
