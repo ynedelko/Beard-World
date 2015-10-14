@@ -10,4 +10,12 @@ describe "adding a beard process" do
     click_on 'Create Beard'
     expect(page).to have_content 'Beard World'
   end
+
+  it "gives an error when a field is left empty" do
+    visit new_beard_path
+    fill_in 'Name', :with => 'Lumberjack'
+    fill_in 'Rating', :with => '10'
+    click_on 'Create Beard'
+    expect(page).to have_content 'You have these errors:'
+  end
 end
