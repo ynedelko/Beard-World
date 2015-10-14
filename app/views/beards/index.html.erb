@@ -8,6 +8,8 @@
 <h2><%= beard.name %><br></h2>
 <h3>
   Rating: <%= beard.rating %> <br>
-  <img src= "<%= beard.image_url %>" /><br>
+  <%= link_to beard_path(beard) do %>
+  <%= image_tag("#{beard.image_url}") %>
+  <%end%>
 </h3>
   <% end %>

@@ -1,0 +1,15 @@
+<%= link_to <img src= "<%= beard.image_url %>" >, beard_path(beard) %>
+
+
+
+
+
+
+
+
+sorting in index view:
+<!-- linkto 'sort alpha', sort: '(title)'
+sort: '(created_at)' -->
+
+in controller under show:
+  # @class = Beard.order(params[:sort])
