@@ -1,6 +1,11 @@
+
 <% content_for(:title, @beard.name) %>
 <% content_for(:nav) do %>
 <%= link_to "Home", beards_path %>
 <% end %>
 <h2><%= @beard.name %></h2>
+<h4>Manliness Factor: <%= @beard.rating %></h4>
 <img src= '<%= @beard.image_url %>' >
+
+<hr>
+<p><%= link_to "Edit Beard", edit_beard_path(@beard) %></p>
