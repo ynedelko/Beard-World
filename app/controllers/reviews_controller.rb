@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     @beard = Beard.find(params[:beard_id])
     @review = @beard.reviews.new(review_params)
     if @review.save
-      redirect_to beard_path(@review.beard)
+      redirect_to beard_path(@beard)
     else
       render :new
     end

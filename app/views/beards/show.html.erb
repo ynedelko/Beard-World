@@ -8,7 +8,7 @@
 <center>
 <h1><%= @beard.name %></h1>
 <h4>Manliness Factor: <%= @beard.rating %></h4>
-<img src= '<%= @beard.image_url %>' >
+<%= image_tag("#{@beard.image_url}") %>
 
 <% if @beard.reviews.any? %>
 <h2>Reviews</h2>
