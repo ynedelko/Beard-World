@@ -11,14 +11,14 @@
 <img src= '<%= @beard.image_url %>' >
 
 <% if @beard.reviews.any? %>
-<h3>Reviews for " <%= @beard.name %> "</h3>
+<h2>Reviews</h2>
 
 <ul>
   <% @beard.reviews.each do |review| %>
   <li>
     <%= review.user %> says:
     <%= review.text %> |
-    <%= link_to "Delete Review", beard_review_path(@beard, review),
+    <%= link_to "Delete", beard_review_path(@beard, review),
     {:method => "delete"} %>
   </li>
   <% end %>
@@ -27,7 +27,7 @@
 <% else %>
   <h5>This beard needs a review!</h5>
 <% end %>
-<h5><%= link_to "Add a review", new_beard_review_path(@beard) %></h5>
+<h4><%= link_to "Add a review", new_beard_review_path(@beard) %></h4>
 </center>
 
 <hr>

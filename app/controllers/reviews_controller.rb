@@ -14,6 +14,13 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @beard = Beard.find(params[:beard_id])
+    @review = @beard.reviews.find(params[:id])
+    @review.destroy
+    redirect_to beard_path(@beard)
+  end
+
 private
   def review_params
     params.require(:review).permit(:user, :text)
