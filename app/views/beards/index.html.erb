@@ -6,15 +6,21 @@
 <h1>Welcome to the wonderful world of Beards!</h1>
 
 
+
+<div class="row">
   <% @beards.each do |beard| %>
-<h2><%= beard.name %><br></h2>
-<h3>
-  Manliness: <%= beard.rating %> <br>
-  <%= link_to beard_path(beard) do %>
-    <%= image_tag("#{beard.image_url}") %>
-  <%end%>
-</h3>
-  <% end %>
+  <div class="col-md-4">
+    <h2><%= beard.name %><br></h2>
+    <h3>
+      Manliness: <%= beard.rating %> <br>
+      <%= link_to beard_path(beard) do %>
+        <%= image_tag("#{beard.image_url}") %>
+      <%end%>
+    </h3>
+  </div>
+    <% end %>
+</div>
+
 
 <hr>
 
