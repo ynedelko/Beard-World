@@ -3,8 +3,10 @@
 
 body {
   background-color: #DDAAE6;
-  color: #220750;
+  color: #271952;
+  // color: white;
   font-family: 'Arya', sans-serif;
+  // background: url("plaid6.jpg") center top no-repeat;
 }
 
 a {
@@ -17,4 +19,9 @@ a:hover {
 
 li {
   list-style-type: none;
+}
+
+.click:hover {
+  -webkit-transform: scale(1.5, 1.5);
+  cursor: pointer;
 }
