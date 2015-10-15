@@ -1,6 +1,6 @@
 class BeardsController < ApplicationController
   def index
-    @beards = Beard.all
+    @beards = Beard.order(rating: :desc).all
   end
 
   def show
