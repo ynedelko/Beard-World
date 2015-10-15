@@ -1,11 +1,34 @@
 
 <% content_for(:title, @beard.name) %>
+
 <% content_for(:nav) do %>
 <%= link_to "Home", beards_path %>
 <% end %>
-<h2><%= @beard.name %></h2>
+
+<center>
+<h1><%= @beard.name %></h1>
 <h4>Manliness Factor: <%= @beard.rating %></h4>
 <img src= '<%= @beard.image_url %>' >
+
+<% if @beard.reviews.any? %>
+<h3>Reviews for " <%= @beard.name %> "</h3>
+
+<ul>
+  <% @beard.reviews.each do |review| %>
+  <li>
+    <%= review.user %> says:
+    <%= review.text %> |
+    <%= link_to "Delete Review", beard_review_path(@beard, review),
+    {:method => "delete"} %>
+  </li>
+  <% end %>
+</ul>
+
+<% else %>
+  <h5>This beard needs a review!</h5>
+<% end %>
+<h5><%= link_to "Add a review", new_beard_review_path(@beard) %></h5>
+</center>
 
 <hr>
 <p><%= link_to "Edit Beard", edit_beard_path(@beard) %></p>

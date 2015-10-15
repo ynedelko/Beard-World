@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @review) %>
+
+<%= form_for [@beard, @review] do |f| %>
+  <%= f.label :user %>
+  <%= f.text_field :user %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <h5><%= f.submit %></h5>
+<% end %>
