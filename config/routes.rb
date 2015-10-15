@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'beards#index'
-  
-  resources :beards
+
+  resources :beards do
+    resources :reviews
+  end
 end
