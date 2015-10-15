@@ -6,7 +6,7 @@
 <h1>Welcome to the wonderful world of Beards!</h1>
 
 
-
+<center>
 <div class="row">
   <% @beards.each do |beard| %>
   <div class="col-md-4">
@@ -20,8 +20,13 @@
   </div>
     <% end %>
 </div>
-
+</center>
 
 <hr>
 
-<%= link_to "Add Beard", new_beard_path %>
+<center>
+<%= link_to new_beard_path do %>
+<%= image_tag("/images/clean.png") %>
+<% end %>
+<h2><%= link_to "Add Beard", new_beard_path %></h2>
+</center>
