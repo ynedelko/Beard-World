@@ -2,7 +2,7 @@
 <% content_for(:title, @beard.name) %>
 
 <% content_for(:nav) do %>
-<%= link_to "Home", beards_path %>
+<%= image_tag("home.png") %> <%= link_to "Home", beards_path %>
 <% end %>
 
 <center>
@@ -31,5 +31,5 @@
 </center>
 
 <hr>
-<p><%= link_to "Edit Beard", edit_beard_path(@beard) %></p>
-<p><%= link_to "Delete Beard", beard_path(@beard), method: :delete %></p>
+<p> <%= image_tag("edit.png") %><%= link_to "Edit Beard", edit_beard_path(@beard) %></p>
+<p><%= image_tag("delete.png") %><%= link_to "Delete Beard", beard_path(@beard), method: :delete %></p>

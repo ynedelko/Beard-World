@@ -1,3 +1,9 @@
+<% content_for(:title, "New Beard") %>
+
+<% content_for(:nav) do %>
+  <%= image_tag("home.png") %> <%= link_to "Home", beards_path %>
+<% end %>
+
 <h1>New Beard</h1>
 
 <%= render "form" %>

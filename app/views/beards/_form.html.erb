@@ -1,13 +1,27 @@
+<center>
 <%= render "layouts/errors", :object => @beard %>
 
 <%= form_for @beard do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
-<%= f.label :rating %>
+<%= f.label :manliness %>
 <%= f.text_field :rating %>
-<%= f.label :image_url %>
+<%= f.label :image %>
 <%= f.text_field :image_url %>
 <%= f.submit %>
 <% end %>
-
-<h4>Manliness factor: 1 = Justin Beiber ... 10 = Hugh Jackman</h4>
+<br>
+<h3>Ex. <strong>Name</strong>  "Ron Swanson"  <strong>Manliness</strong>  "10"  <strong>Image</strong>  "lumberjack.png" </h3>
+<br>
+<h4>Pick one of the following for a fancy image of your beard. (We think the names a self-explanitory.)</h4>
+  <li>hipster.png</li>
+  <li>goatee.png</li>
+  <li>russian.png</li>
+  <li>v4vendetta.png</li>
+  <li>manly.png</li>
+  <li>lumberjack.png</li>
+  <li>frenchfork.png</li>
+  <li>mike.png</li>
+  <li>courtney.png</li>
+  <%= image_tag('pipe.png') %>
+</center>

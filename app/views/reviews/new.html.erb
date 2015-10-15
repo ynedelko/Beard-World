@@ -1,3 +1,8 @@
+<% content_for(:title, "New Review") %>
+<% content_for(:nav) do %>
+  <%= link_to "Home", beards_path %>
+<% end %>
+
 <h1>New Review for <%= @beard.name %> </h1>
 
 <%= render 'form' %>
