@@ -15,6 +15,10 @@
     <hr>
   </nav>
   <%= yield %>
+<center>
+  <h3><%= flash[:alert] %>
+  <%= flash[:notice] %></h3>
+</center>
 </body>
 </div>
 </html>

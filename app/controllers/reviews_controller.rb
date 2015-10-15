@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
     @beard = Beard.find(params[:beard_id])
     @review = @beard.reviews.new(review_params)
     if @review.save
+      flash[:notice] = "Success! Let it be hairy!"
       redirect_to beard_path(@beard)
     else
       render :new
